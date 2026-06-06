@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar Drift</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <canvas id="space-canvas" aria-label="Interactive 3D solar system"></canvas>
+
+    <button class="back-button" id="back-button" type="button" aria-label="Back to solar system">
+      <span id="back-icon" aria-hidden="true"></span>
+    </button>
+
+    <main id="main-scroll" class="main-scroll">
+      <section class="hero-section" data-scene="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Solar Drift</p>
+          <h1>The Solar System</h1>
+          <p>
+            Sweep past rocky worlds, blue oceans, red deserts, and Saturn's rings in a scroll-driven tour
+            across our neighborhood of space.
+          </p>
+        </div>
+      </section>
+
+      <section class="planet-section sun" data-planet="sun">
+        <div class="planet-panel">
+          <p class="eyebrow">00 / Star Core</p>
+          <h2>Sun</h2>
+          <p>The Sun holds the Solar System together, a churning sphere of plasma with magnetic storms and flares.</p>
+          <dl>
+            <div><dt>Type</dt><dd>G-type star</dd></div>
+            <div><dt>Surface</dt><dd>Plasma</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section mercury" data-planet="mercury">
+        <div class="planet-panel">
+          <p class="eyebrow">01 / Inner World</p>
+          <h2>Mercury</h2>
+          <p>The smallest planet moves fastest around the Sun, crossing a year in just 88 Earth days.</p>
+          <dl>
+            <div><dt>Diameter</dt><dd>4,879 km</dd></div>
+            <div><dt>Day Length</dt><dd>59 Earth days</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section venus" data-planet="venus">
+        <div class="planet-panel">
+          <p class="eyebrow">02 / Cloud Furnace</p>
+          <h2>Venus</h2>
+          <p>Venus hides a volcanic surface beneath a crushing atmosphere and sunlight scattered through sulfur clouds.</p>
+          <dl>
+            <div><dt>Atmosphere</dt><dd>CO2</dd></div>
+            <div><dt>Surface</dt><dd>Volcanic plains</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section earth" data-planet="earth">
+        <div class="planet-panel">
+          <p class="eyebrow">03 / Ocean World</p>
+          <h2>Earth</h2>
+          <p>Liquid water, active weather, and a protective magnetic field make Earth a restless living planet.</p>
+          <dl>
+            <div><dt>Moons</dt><dd>1</dd></div>
+            <div><dt>Surface Water</dt><dd>~71%</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section mars" data-planet="mars">
+        <div class="planet-panel">
+          <p class="eyebrow">04 / Red Frontier</p>
+          <h2>Mars</h2>
+          <p>Iron-rich dust gives Mars its copper glow, while ancient river valleys hint at a wetter past.</p>
+          <dl>
+            <div><dt>Moons</dt><dd>2</dd></div>
+            <div><dt>Gravity</dt><dd>38% of Earth</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section jupiter" data-planet="jupiter">
+        <div class="planet-panel">
+          <p class="eyebrow">05 / Storm Giant</p>
+          <h2>Jupiter</h2>
+          <p>Jupiter is a colossal atmosphere of bands, turbulence, and storms larger than whole rocky planets.</p>
+          <dl>
+            <div><dt>Great Spot</dt><dd>Centuries old</dd></div>
+            <div><dt>Composition</dt><dd>Gas giant</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section saturn" data-planet="saturn">
+        <div class="planet-panel">
+          <p class="eyebrow">06 / Ring Giant</p>
+          <h2>Saturn</h2>
+          <p>Saturn's rings are icy fragments orbiting in a plane wider than Earth yet only tens of meters thick.</p>
+          <dl>
+            <div><dt>Known Moons</dt><dd>140+</dd></div>
+            <div><dt>Year</dt><dd>29.5 Earth years</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section uranus" data-planet="uranus">
+        <div class="planet-panel">
+          <p class="eyebrow">07 / Ice Giant</p>
+          <h2>Uranus</h2>
+          <p>Uranus rolls around the Sun on its side, a pale blue-green world wrapped in cold methane haze.</p>
+          <dl>
+            <div><dt>Tilt</dt><dd>98 degrees</dd></div>
+            <div><dt>Class</dt><dd>Ice giant</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="planet-section neptune" data-planet="neptune">
+        <div class="planet-panel">
+          <p class="eyebrow">08 / Deep Blue</p>
+          <h2>Neptune</h2>
+          <p>Neptune's atmosphere carries supersonic winds and dark storms across a distant cobalt world.</p>
+          <dl>
+            <div><dt>Winds</dt><dd>Supersonic</dd></div>
+            <div><dt>Year</dt><dd>165 Earth years</dd></div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <section id="detail-scroll" class="detail-scroll" aria-live="polite">
+      <div class="detail-copy">
+        <p class="eyebrow" id="detail-kicker">World profile</p>
+        <h2 id="detail-title">Earth</h2>
+        <p id="detail-text"></p>
+      </div>
+      <div class="detail-stats" id="detail-stats"></div>
+    </section>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
